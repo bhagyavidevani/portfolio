@@ -1,0 +1,483 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+ --theme-color:#ffc107;
+ --white:#ffffff;
+ --text-color:rgba(105, 102, 102, 0.815);
+}
+ul{
+  padding-left: 0;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+.w-2 {
+  width: 50%;
+}
+.w-2 {
+  width: 50%;
+}
+.w-3{
+  width: 33.33%;
+}
+.w-4{
+  width: 25%;
+}
+.w-5{
+  width: 20%;
+}
+.justify-center {
+  justify-content: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
+}
+/* home */
+header .logo a img{
+  width:150px;
+}
+.main-img{
+  background: url("https://img.freepik.com/premium-vector/black-abstract-background-with-diagonal-lines-vector-illustration_249611-4967.jpg") rgba(8, 0, 28, 0.557);
+  /* background: url(../images/background.jpg) rgba(33, 31, 0, 0.5); */
+  background-blend-mode: overlay;
+  width: 100%;
+  height: 800px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+.home {
+  position: relative;
+  z-index: 1; /* Keeps the home section on top */
+  margin-top: 200px; 
+}
+
+
+.about .about-bg ,.education .education-bg ,.skills .skills-bg ,.portfolio .portfolio-bg ,.contact .contact-bg{
+  background-color: rgba(0, 0, 0, 0.694);
+  padding: 50px 30px;
+  border-radius: 10px;
+  margin-bottom: 60px;
+}
+.home-conatent .btn{
+  transition: all 0.5s linear;
+  letter-spacing: 1px;
+}
+.home-conatent .btn:hover{
+  background-color: transparent !important;
+  box-shadow: 0 0px 19px 5px var(--theme-color);
+  transform: scale(1.0);
+}
+.home .home-img img{
+  width: 650px;
+  transition: all 0.3s ease-in-out;
+  animation: up-down 2s infinite alternate;
+}
+@keyframes up-down {
+  0% {
+    transform: translateY(25px);
+  }
+  100% {
+    transform: translateY(-25px);
+  }
+}
+.fancy {
+  background-color: transparent;
+  border: 2px solid var(--theme-color);
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  outline: none;
+  overflow: visible;
+  padding: 15px 35px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  transition: all 0.3s ease-in-out;
+  user-select: none;
+  font-size: 13px;
+ }
+ 
+ .fancy::before {
+  content: " ";
+  width: 1.5625rem;
+  height: 2px;
+  background: var(--white);
+  top: 50%;
+  left: 1.5em;
+  position: absolute;
+  transform: translateY(-50%);
+  transform-origin: center;
+  transition: all 0.3s linear, width 0.3s linear;
+ }
+ 
+ .fancy .text {
+  font-size: 1.125em;
+  line-height: 1.33333em;
+  padding-left: 2em;
+  display: block;
+  text-align: left;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  text-decoration: none;
+  color:var(--white);
+ }
+ 
+ .fancy .top-key {
+  height: 2px;
+  width: 1.5625rem;
+  top: -2px;
+  left: 0.625rem;
+  position: absolute;
+  background: rgba(21, 20, 20, 0.833);
+  transition: width 0.5s ease-out, left 0.3s ease-out;
+ }
+ 
+ .fancy .bottom-key-1 {
+  height: 2px;
+  width: 1.5625rem;
+  right: 1.875rem;
+  bottom: -2px;
+  position: absolute;
+  background: rgba(21, 20, 20, 0.833);
+  transition: width 0.5s ease-out, right 0.3s ease-out;
+ }
+ 
+ .fancy .bottom-key-2 {
+  height: 2px;
+  width: 0.625rem;
+  right: 0.625rem;
+  bottom: -2px;
+  position: absolute;
+  background: rgba(21, 20, 20, 0.833);
+  transition: width 0.5s ease-out, right 0.3s ease-out;
+ }
+ 
+ .fancy:hover {
+  color: white;
+  background: var(--theme-color);
+ }
+ 
+ .fancy:hover::before {
+  width: 0.9375rem;
+  background: var(--white);
+ }
+ 
+ .fancy:hover .text {
+  color: var(--white);
+  padding-left: 1.5em;
+ }
+ 
+ .fancy:hover .top-key {
+  left: -2px;
+  width: 0px;
+ }
+ 
+ .fancy:hover .bottom-key-1,
+  .fancy:hover .bottom-key-2 {
+  right: 0;
+  width: 0;
+ }
+
+ /* About Me */
+ .about ,.education ,.skills ,.portfolio,.contact{
+  margin-top: 100px;
+  z-index: 1;
+  color: white; /* Adds space above the About section */
+}
+.about-item h2{
+  color: var(--theme-color);
+}
+.about .about-title h2 ,.education .education-title h2 ,.skills .skills-title h2 ,.portfolio .portfolio-title h2 ,.contact .contact-title h2{ 
+  position: relative;
+  font-size: 30px;
+  font-weight: 600;
+  transition: all 0.5s linear;
+}
+.about .about-title h2::after ,.education .education-title h2::after ,.skills .skills-title h2::after ,.portfolio .portfolio-title h2::after ,.contact .contact-title h2::after{
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background-color: var(--theme-color);
+  transition: all 0.5s linear;
+}
+.about .about-title h2:hover::after{
+  width: 15%;
+}
+.about .about-title h2:hover ,.education .education-title h2:hover ,.skills .skills-title h2:hover ,.portfolio .portfolio-title h2:hover ,.contact .contact-title h2:hover{
+  color: var(--theme-color);
+}
+.about .about-title p{
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.about img{
+  margin-top: 50px;
+  border-radius: 20px;
+  box-shadow: rgba(222, 223, 223, 0.336) 0px 2px 4px 0px, rgba(255, 255, 255, 0.32) 0px 2px 16px 0px;
+  transition: all 0.2s linear;
+  animation: up-down 2s infinite alternate-reverse;
+}
+@keyframes up-down {
+  0% {
+    transform: translateY(15px);
+  }
+  100% {
+    transform: translateY(-15px);
+  }
+}
+.about img:hover ,.skill .center-slider img:hover{
+  box-shadow: rgba(205, 205, 49, 0.559) 0px 2px 4px 0px, rgba(121, 111, 37, 0.32) 0px 2px 16px 0px;
+}
+.about .about-item h2{
+  margin-top: 25px;
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.about .about-item ul{
+  margin: 20px 0;
+}
+.about .about-item ul li , .about .about-item .personal li{
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+.about .about-item .personal li{
+  margin-left: 30px;
+}
+.about .about-item ul li i,.about .about-item .personal li i{
+  color: var(--text-color);
+  font-size: 25px;
+}
+.about .about-item ul li i , .about .about-item .personal li i{
+  color: var(--theme-color);
+}
+.about .about-item ul li strong , .about .about-item .personal li strong{
+  margin-right: 5px;
+}
+
+
+/* Education */
+.education .education-title h2:hover::after{
+  width: 10%;
+}
+.education .education-item .edu-collge ,.education .education-item .edu-courses{
+  border-left: 2px solid var(--theme-color);
+  padding-left: 40px;
+}
+.education .education-item .edu-collge h3 ,.education .education-item .edu-courses h3{
+   font-weight: 500;
+   font-size: 17px;
+   color: var(--white);
+   margin-top: 50px;
+   position: relative;
+}
+.education .education-item .edu-collge h3::after ,.education .education-item .edu-courses h3::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -47px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  z-index: 9;
+  background-color: white;
+  border: 2px solid var(--theme-color);
+}
+.education .education-item span{
+  margin: 8px 15px;
+  font-weight: 500;
+  font-style: italic;
+  color:  rgb(74, 74, 74);
+}
+.education .education-item h4 ,.skills-title h5{
+  font-weight: 600;
+  font-style: italic;
+}
+.education .education-item p{
+  width: 95%;
+  text-align: justify;
+
+}
+
+/* skills */
+.skills .skills-title h2:hover::after ,.portfolio .portfolio-title h2:hover::after ,.contact .contact-title h2:hover::after{
+  width: 8%;
+}
+.skills .skills-title p{
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.skills .skills-item{
+  margin-top: 20px;
+}
+.skills .center-slider img ,.skills .skills-title img{
+  /* width: 60%; */
+  aspect-ratio: 1/1;
+  /* background-color:rgba(230, 227, 227, 0.705); */
+  padding: 20px;
+  border-radius: 20px;
+  margin-top: 40px;
+  transition: all 0.2s linear;
+}
+/* .skills .skills-title img:hover{
+  background-color: rgba(208, 207, 207, 0.705);
+} */
+ .skills .skills-title img {
+  aspect-ratio: 1/1;
+  background-color: rgb(30, 30, 30);
+  backdrop-filter: blur(10px); 
+  padding: 20px;
+  border-radius: 20px;
+  margin-top: 40px;
+  transition: all 0.3s ease-in-out; /* smooth transition */
+  position: relative;
+  overflow: hidden;
+}
+
+.skills .skills-title img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.2); 
+  transition: transform 0.6s ease-in-out;
+  transform: rotate(0deg);
+}
+
+.skills .skills-title img:hover::before {
+  transform: rotate(360deg); 
+}
+
+.skills .skills-title img:hover {
+  transform: scale(1.05); 
+  filter: brightness(1.2); 
+}
+
+/* portfolio */
+/* Container for the image */
+.image-container {
+  position: relative;
+  display: inline-block;
+  width: 350px;
+}
+.portfolio-img h5:hover{
+  color: var(--theme-color) !important;
+}
+/* Image Styling */
+.image-container img {
+  width: 100%;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Overlay Styling */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(254, 254, 254, 0.039);
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: scale(0);
+}
+
+/* Icon Styling */
+.link-icon {
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+}
+
+/* Hover Effects */
+.image-container:hover .overlay {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.image-container:hover img {
+  opacity: 0.3;
+}
+  /* contact */
+  .contact-item .social-icon a i{
+    padding: 12px;
+    background-color: var(--theme-color);
+    border: 2px solid var(--theme-color);
+    transition: all 0.3s linear;
+  } 
+.contact-item .social-icon a i:hover{
+  transform: scale(1.1);
+  background-color: transparent;
+  box-shadow: rgba(195, 220, 6, 0.46) 0px 0px 19px 5px;
+}
+.contact form input ,.contact form textarea{
+  background-color: transparent;
+  border-width: 2px !important;
+  border-style: solid !important;
+  border-color: rgb(71, 71, 71) !important;
+  
+}
+.form-control{
+  display: block;
+  width: 100%;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+
+}
+.contact form input:focus, .contact form textarea:focus {
+  background-color: transparent;
+  box-shadow: none;
+  border: 2px solid var(--theme-color) !important;
+}
+.contact form .nameInput {
+  margin-bottom: 1rem;
+}
+
+
+/* Back to Top Button */
+.back-to-top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--theme-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 25px;
+  cursor: pointer;
+  transition: all 0.5s linear;
+  display: none; 
+  /* z-index: 100; */
+}
+
+.back-to-top-btn:hover {
+  background-color: #f59506;
+}
